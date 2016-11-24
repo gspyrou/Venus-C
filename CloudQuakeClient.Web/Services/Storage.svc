@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="CloudQuakeClient.Web.Services.Storage" CodeBehind="Storage.svc.cs" %>
