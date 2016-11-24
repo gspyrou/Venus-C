@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52045/Services/AzureStorage.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.StorageClient" />
+  <xs:complexType name="QuakeMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeleteMe" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Depth" type="xs:double" />
+      <xs:element minOccurs="0" name="Dip" type="xs:double" />
+      <xs:element minOccurs="0" name="EventID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lat" type="xs:double" />
+      <xs:element minOccurs="0" name="LatCalc" type="xs:double" />
+      <xs:element minOccurs="0" name="LatCalc2" type="xs:double" />
+      <xs:element minOccurs="0" name="LatCw" type="xs:double" />
+      <xs:element minOccurs="0" name="LatCw2" type="xs:double" />
+      <xs:element minOccurs="0" name="Length" type="xs:double" />
+      <xs:element minOccurs="0" name="Lon" type="xs:double" />
+      <xs:element minOccurs="0" name="LonCalc" type="xs:double" />
+      <xs:element minOccurs="0" name="LonCalc2" type="xs:double" />
+      <xs:element minOccurs="0" name="LonCw" type="xs:double" />
+      <xs:element minOccurs="0" name="LonCw2" type="xs:double" />
+      <xs:element minOccurs="0" name="Magnitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Station" nillable="true" type="tns:StationsInfo" />
+      <xs:element minOccurs="0" name="StationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StationsGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stress" type="xs:double" />
+      <xs:element minOccurs="0" name="Strike" type="xs:double" />
+      <xs:element minOccurs="0" name="TopDepth" type="xs:double" />
+      <xs:element minOccurs="0" name="Width" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuakeMessage" nillable="true" type="tns:QuakeMessage" />
+  <xs:complexType name="StationsInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.StorageClient" base="q1:TableServiceEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CrustalAmplification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Elevation" type="xs:double" />
+          <xs:element minOccurs="0" name="KappaCoeffient" type="xs:double" />
+          <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SiteAmplification" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SoilCondition" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StationsInfo" nillable="true" type="tns:StationsInfo" />
+  <xs:complexType name="ArrayOfStationsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StationsInfo" nillable="true" type="tns:StationsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStationsInfo" nillable="true" type="tns:ArrayOfStationsInfo" />
+</xs:schema>

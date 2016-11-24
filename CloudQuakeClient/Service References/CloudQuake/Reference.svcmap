@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="501b8004-ebd4-4e51-857e-73cdab17f4bb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64737/Services/Storage.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Storage.wsdl" MetadataType="Wsdl" ID="05d1d647-426c-47ea-a511-a5b13b1d510e" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?wsdl" />
+    <MetadataFile FileName="Storage2.xsd" MetadataType="Schema" ID="2e63b81c-6ba9-4921-afd7-eb9a9598a1b2" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?xsd=xsd2" />
+    <MetadataFile FileName="Storage1.xsd" MetadataType="Schema" ID="4472e0e6-1b22-4536-a6be-e22cf3249ef4" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?xsd=xsd0" />
+    <MetadataFile FileName="Storage.disco" MetadataType="Disco" ID="766008bc-e7ab-42dc-8caa-e887532c29ab" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?disco" />
+    <MetadataFile FileName="Storage3.xsd" MetadataType="Schema" ID="088964ff-6330-4f9d-a44f-bb1c89a9a1b1" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?xsd=xsd3" />
+    <MetadataFile FileName="Storage.xsd" MetadataType="Schema" ID="075865af-23bb-456f-89b4-0a1698fa4620" SourceId="1" SourceUrl="http://localhost:64737/Services/Storage.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

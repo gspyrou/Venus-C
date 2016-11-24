@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Demo" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2012-05.1.7">
+  <Role name="CloudQuakeDemo.Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="George" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFi00DrHzRCJTr4DNkmRq78wDQYJKoZIhvcNAQEBBQAEggEAJovoN7cRLpnCeCZXKqRbs+31h0i4pbAHIVGTt4rj8z0uwzp2DHx8hd6krgRFZ35DxFXneqEc3dGASFr0mH+sI0rawq3bZCkscGOPJ2rtqF8tOPVA5J+tvY6SsLFb8kPkw6YhdEeinUwLWu4ZL1INf2AvgW8N3U1u5T2EoGUrKKftVXXmeY2TRfReismXG7cTY+QNdQGz0S+6V3AdRMPk1PBOQ54UOfA5jYz47yz5nMqKZNObF67j5PENwbsZVomSEO/jUg0jVv2mIFzIzkpDs5Znrr4G+tHsSah/h9N1jLu3KwA4LdIPn1zepQ5Ve5RV/iR9NkNwZTANuj4Fsdpk0jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECFbreZeJFDrbgBDMajQvg9RZ3aUCQNMVvfHR" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-05-31T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="503F78BFB01F0C7F2415DFC4F1A342D27F113C4C" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

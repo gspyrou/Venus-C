@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f6578f34-ab03-41f4-97fa-4d16cf18101c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hydra1.geo.auth.gr/Services/AzureStorage.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AzureStorage.xsd" MetadataType="Schema" ID="f4abc6b9-ece2-4952-ad23-b56d6430637f" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?xsd=xsd4" />
+    <MetadataFile FileName="AzureStorage1.xsd" MetadataType="Schema" ID="0d76fec6-31d7-4a78-a694-daed0db68dbb" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?xsd=xsd2" />
+    <MetadataFile FileName="AzureStorage2.xsd" MetadataType="Schema" ID="70622fed-8129-41dd-83cf-a2d0bb92efb2" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?xsd=xsd0" />
+    <MetadataFile FileName="AzureStorage.wsdl" MetadataType="Wsdl" ID="4f0f91c7-6182-400a-88f3-f036ff257286" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?wsdl" />
+    <MetadataFile FileName="AzureStorage3.xsd" MetadataType="Schema" ID="d902b0dc-cfba-4362-8772-58ad09512dcd" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?xsd=xsd3" />
+    <MetadataFile FileName="AzureStorage.disco" MetadataType="Disco" ID="60a7cd36-3c8c-464a-bbb2-fb4a528a9f42" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?disco" />
+    <MetadataFile FileName="AzureStorage4.xsd" MetadataType="Schema" ID="2d5a67bb-3b99-48c8-9130-e1fe185a9d65" SourceId="1" SourceUrl="http://hydra1.geo.auth.gr/Services/AzureStorage.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

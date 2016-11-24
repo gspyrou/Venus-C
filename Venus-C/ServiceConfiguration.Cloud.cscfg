@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Venus_C" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="exsim_dmb_worker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudquake;AccountKey=Mm+fR9oqs12+fF/96ThXUtl3eMCkMlYMRvTf+dEP36dQRNqS6oKQoRrtELTF4AWaPEISkWsMBzo65ZI+PU2LGA==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="George" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED5/HpPc6gy+R3WYxgDaUpYwDQYJKoZIhvcNAQEBBQAEggEAgP7dSfCubNfL5rbGkmB/bxYjOz/p/DBVIX1KxKbOD32xGfotF5MpnPN6XWSmdCVCzfMfFA1OuuVnkv5VCIhQb1uGJPIW6wVg1DlvLLb7ScmeTNAJKe166pYcHUGUFHoE4qnbHErzGbrXL/N6xpcMblQBuGAIRJPpdR+wxO7fFJmDJWUfAI74juttAZu9Y/h/BOkiKL+xRyQGU1Q9r5G8Ri2XiyU7/ffdbj+4rxZJHN9nALIr8XX8Tn5dNeJBcSIaAYK/oui0XPXwDyM6el3PaCRxc5EG00OkzsH6WO8Z/g5SFohwovX2AYl8zjWgEIKr72F9roNUnsrWPrass8QccDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECJ8dqrBj69VJgBBCwsgwTkVycOiDSfgotYTa" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-02-22T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="NumberOfMessages" value="1" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="1BFC135FC0FC6F54FAFC8F6346948DDD87B597D4" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="PartitionWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="George" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED5/HpPc6gy+R3WYxgDaUpYwDQYJKoZIhvcNAQEBBQAEggEAgP7dSfCubNfL5rbGkmB/bxYjOz/p/DBVIX1KxKbOD32xGfotF5MpnPN6XWSmdCVCzfMfFA1OuuVnkv5VCIhQb1uGJPIW6wVg1DlvLLb7ScmeTNAJKe166pYcHUGUFHoE4qnbHErzGbrXL/N6xpcMblQBuGAIRJPpdR+wxO7fFJmDJWUfAI74juttAZu9Y/h/BOkiKL+xRyQGU1Q9r5G8Ri2XiyU7/ffdbj+4rxZJHN9nALIr8XX8Tn5dNeJBcSIaAYK/oui0XPXwDyM6el3PaCRxc5EG00OkzsH6WO8Z/g5SFohwovX2AYl8zjWgEIKr72F9roNUnsrWPrass8QccDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECJ8dqrBj69VJgBBCwsgwTkVycOiDSfgotYTa" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-02-22T23:59:59.0000000+02:00" />
+      <Setting name="ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudquake;AccountKey=Mm+fR9oqs12+fF/96ThXUtl3eMCkMlYMRvTf+dEP36dQRNqS6oKQoRrtELTF4AWaPEISkWsMBzo65ZI+PU2LGA==" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="1BFC135FC0FC6F54FAFC8F6346948DDD87B597D4" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="ReducerWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="George" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED5/HpPc6gy+R3WYxgDaUpYwDQYJKoZIhvcNAQEBBQAEggEAgP7dSfCubNfL5rbGkmB/bxYjOz/p/DBVIX1KxKbOD32xGfotF5MpnPN6XWSmdCVCzfMfFA1OuuVnkv5VCIhQb1uGJPIW6wVg1DlvLLb7ScmeTNAJKe166pYcHUGUFHoE4qnbHErzGbrXL/N6xpcMblQBuGAIRJPpdR+wxO7fFJmDJWUfAI74juttAZu9Y/h/BOkiKL+xRyQGU1Q9r5G8Ri2XiyU7/ffdbj+4rxZJHN9nALIr8XX8Tn5dNeJBcSIaAYK/oui0XPXwDyM6el3PaCRxc5EG00OkzsH6WO8Z/g5SFohwovX2AYl8zjWgEIKr72F9roNUnsrWPrass8QccDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECJ8dqrBj69VJgBBCwsgwTkVycOiDSfgotYTa" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-02-22T23:59:59.0000000+02:00" />
+      <Setting name="ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudquake;AccountKey=Mm+fR9oqs12+fF/96ThXUtl3eMCkMlYMRvTf+dEP36dQRNqS6oKQoRrtELTF4AWaPEISkWsMBzo65ZI+PU2LGA==" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="1BFC135FC0FC6F54FAFC8F6346948DDD87B597D4" thumbprintAlgorithm="sha1" />
+      <Certificate name="CloudQuake" thumbprint="C4ABC33460A4C83E455732027EA34BB9D0EFCE85" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

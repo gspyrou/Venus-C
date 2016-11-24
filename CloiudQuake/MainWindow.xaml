@@ -1,0 +1,168 @@
+﻿<metro:Window x:Class="CloiudQuake.MainWindow"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:metro="http://schemas.codeplex.com/elysium/theme"
+              xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+              WindowStartupLocation="CenterScreen"
+              Width="1024"
+              Height="381">
+    <TabControl>
+        <TabItem Header="Simulation">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Cloud-Quake demo application "
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           FontFamily="Segoe WP"
+                           FontSize="30" />
+                <esri:Map x:Name="MyMap"
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          Extent="17, 33, 32, 44"
+                          MouseClick="MyMap_MouseClick">
+                    <esri:ArcGISTiledMapServiceLayer ID="StreetMapLayer"
+                                                     Url="http://server.arcgisonline.com/ArcGIS/rest/services/ESRI_StreetMap_World_2D/MapServer" />
+                    <esri:GraphicsLayer ID="Data" />
+
+                </esri:Map>
+
+
+                <StackPanel Orientation="Vertical"
+                            Grid.Row="1"
+                            Grid.Column="0">
+                    <TextBlock Text="Event ID"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="EventID"
+                             FontSize="19"
+                             Background="LightYellow" />
+                    <TextBlock Text="Magnitude"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox  x:Name="Magnitude"
+                              FontSize="19"
+                              Background="LightYellow" />
+
+                    <TextBlock Text="Strike"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Strike"
+                             FontSize="19"
+                             Text="90"
+                             Background="LightYellow" />
+                    <TextBlock Text="Depth (km)"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Depth"
+                             FontSize="19"
+                             Text="3"
+                             Background="LightYellow" />
+                    <TextBlock Text="Dip"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Dip"
+                             FontSize="19"
+                             Text="87.0"
+                             Background="LightYellow" />
+
+                    <TextBlock Text="Stress"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Stress"
+                             FontSize="19"
+                             Text="55.0"
+                             Background="LightYellow" />
+                    <TextBlock Text="Flag"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Flag"
+                             FontSize="19"
+                             Text="1"
+                             Background="LightYellow" />
+                    <TextBlock Text="Fault type"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="FaultType"
+                             FontSize="19"
+                             Text="N"
+                             Background="LightYellow" />
+                    <TextBlock Text="Stations"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Stations"
+                             FontSize="19"
+                             Text="benchmark"
+                             Background="LightYellow" />
+                    <TextBlock Text="Latitude"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Latitude"
+                             FontSize="19"
+                             Background="LightYellow"
+                             Text="40.7506" />
+
+                    <TextBlock Text="Longitude"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="Longitude"
+                             FontSize="19"
+                             Background="LightYellow"
+                             Text="23.0743" />
+
+                    <Button Click="Button_Click"
+                            Grid.Row="0"
+                            Grid.Column="5"
+                            Content="Send message "
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            FontFamily="Segoe WP"
+                            FontSize="20"
+                            Margin="5"
+                            IsEnabled="False"
+                            x:Name="SendMessage" />
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+        <TabItem Header="Manage Stations">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical"
+                            Grid.Column="0"
+                            Grid.Row="0">
+                    <TextBlock Text="Stations group name"
+                               FontFamily="Segoe WP"
+                               FontSize="20" />
+                    <TextBox x:Name="GroupName"
+                             FontSize="19"
+                             Background="LightYellow" />
+                    <Button Content="Open file"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            FontFamily="Segoe WP"
+                            FontSize="20"
+                            Margin="5"
+                            Click="Button_Click_1" />
+                </StackPanel>
+                <ListBox Grid.Row="0"
+                         Grid.Column="1"
+                         x:Name="StationsList">
+
+                </ListBox>
+            </Grid>
+
+        </TabItem>
+    </TabControl>
+
+</metro:Window>

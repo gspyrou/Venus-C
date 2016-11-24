@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="Venus_C" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="exsim_dmb_worker" vmsize="Small">
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="ConnectionString" />
+      <Setting name="NumberOfMessages" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="LocalStorage" cleanOnRoleRecycle="true" />
+    </LocalResources>
+  </WorkerRole>
+  <WorkerRole name="PartitionWorker" vmsize="ExtraSmall">
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="ConnectionString" />
+    </ConfigurationSettings>
+  </WorkerRole>
+  <WorkerRole name="ReducerWorker" vmsize="ExtraSmall">
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="ConnectionString" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="LocalStorage" cleanOnRoleRecycle="true" />
+    </LocalResources>
+    <Certificates>
+      <Certificate name="CloudQuake" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WorkerRole>
+</ServiceDefinition>
